@@ -13,14 +13,5 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Button bStartFirsActivity = (Button) findViewById(R.id.buttonFirsActivity);
-        bStartFirsActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startFirstActivityIntent = new Intent(SecondActivity.this, MainActivity.class);
-                startActivity(startFirstActivityIntent);
-                finish();
-            }
-        });
     }
 }
