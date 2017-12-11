@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="vardas">Vardenis</string>
+    <string name="pavarde">Pavardenis</string>
+    <string name="button_caption">Set Name</string>
+    <string name="mano_vardas">Raimis</string>
+    <string name="mano_pavarde">Sarka</string>
+    <string name="sec_activity">NEXT ACT</string>
+    <string name="fst_activity">FIRST ACT</string>
+</resources>
