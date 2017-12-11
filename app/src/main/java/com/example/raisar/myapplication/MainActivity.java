@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String mVardas;
     public String mPavarde;
+	
 
     private TextView mVardasTextView;
     private TextView mPavardeTextView;
