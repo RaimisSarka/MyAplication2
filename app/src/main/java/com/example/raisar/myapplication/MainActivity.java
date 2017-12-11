@@ -111,12 +111,12 @@ public class MainActivity extends AppCompatActivity {
         String name = getName.getText().toString();
         String lastName = getLastName.getText().toString();
         
-        if (name != null && lastName != null){
+        if (!name.equals("") && !lastName.equals("")){
             util.setName(name, lastName);
             mVardas = name;
             mPavarde = lastName;
         } else {
-            if (mVardas == null && mPavarde == null) {
+            if (mVardas.equals("") && mPavarde.equals("")) {
                 util.setName(getResources().getString(R.string.mano_vardas), getResources().getString(R.string.mano_pavarde));
             }
         }
