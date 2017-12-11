@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mVardasTextView;
     private TextView mPavardeTextView;
+
+    private EditText mNameEditText;
+    private EditText mLastNameEditText;
 
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -100,7 +104,23 @@ public class MainActivity extends AppCompatActivity {
 
     //onClick from layout
     public void SetMyName(View view) {
-        util.setName(getResources().getString(R.string.mano_vardas), getResources().getString(R.string.mano_pavarde));
+
+        EditText getName = (EditText) findViewById(R.id.editTextName);
+        EditText getLastName = (EditText) findViewById(R.id.editTextLastName);
+
+        String name = getName.getText().toString();
+        String lastName = getLastName.getText().toString();
+        
+        if (name != null && lastName != null){
+            util.setName(name, lastName);
+            mVardas = name;
+            mPavarde = lastName;
+        } else {
+            if (mVardas == null && mPavarde == null) {
+                util.setName(getResources().getString(R.string.mano_vardas), getResources().getString(R.string.mano_pavarde));
+            }
+        }
+
         setNamesToViews(mVardas, mPavarde);
     }
 
