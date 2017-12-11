@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        //TODO (1) Sukurti adapteri
         mAdapter = new EilutesAdapteris(mEiluciuSarasas);
         mRecyclerView.setAdapter(mAdapter);
 
